@@ -49,9 +49,9 @@ function refreshTime() {
 
 
 
-var slideShow = document.getElementById("staticImage");
+var slideShow = document.getElementById("staticImage")
 
-const img = [
+const img = [ 
   "hobbyimages/image1.jpg",
   "hobbyimages/image2.gif",
   "hobbyimages/image3.jpg",
@@ -62,14 +62,12 @@ const img = [
   "hobbyimages/image8.jpg",
   "hobbyimages/image9.jpg",
   "hobbyimages/image10.jpg",
-  "hobbyimages/image11.jpg"
 ];
 
 var counter = 0;
 
 function loopTimer () {
   slideShow.src = img[counter];
-  console.log(counter);
   counter++;
 
   if (counter < img.length) {
@@ -81,4 +79,6 @@ function loopTimer () {
   }
 }
 
-loopTimer()
+loopTimer();
+
+//slideShow.src = img[3];
