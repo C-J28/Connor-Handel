@@ -122,6 +122,7 @@ body {
 
 .hobbyList {
   float: left;
+  padding-left: 2rem;
 }
 
 .hobbyListItem {
