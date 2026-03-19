@@ -5,130 +5,145 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connor Joseph Handel - Computer & Technology Security student, embedded systems enthusiast, and maker.">
     <title>Connor Joseph Handel</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<header>
-    <div class="main">
-            <div> 
-                <img src = "images/Name.svg" class="name"/>
+<body class="dark-theme">
+    <header>
+        <div class="main">
+            <div>
+                <img src="images/Name.svg" class="name" alt="Connor Joseph Handel"/>
             </div>
-            <p>[<span id="time"></span>>]</p>
+            <p class="tagline">security researcher / maker / builder</p>
+            <p class="timestamp">[<span id="time"></span><span class="cursor">_</span>]</p>
         </div>
-    </div>
-</header>
+    </header>
 
-<body class="dark-theme">   
-    <div class="Row">
+    <nav class="Row">
         <div class="Column">
-                <a href="https://www.linkedin.com/in/connor-handel-48b78022b" target="_blank">
-                <img src="images/linkedin.svg" class="menu"/>
-                </a>
-        </div>
-        <div class="Column">
-                <a href="https://twitter.com/handel_connor" target="_blank">
-                <img src="images/twitter.svg" class="menu"/>
-                </a>
-        </div>
-        <div class="Column">
-            <a href="https://github.com/C-J28" target="_blank">
-            <img src="images/github.svg" class="menu"/>
+            <a href="https://www.linkedin.com/in/connor-handel-48b78022b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="images/linkedin.svg" class="menu" alt="LinkedIn"/>
             </a>
         </div>
         <div class="Column">
-            <div>
-                <img class="theme-btn" src="images/palette-solid.svg" class="menu"/>
-            </div>
+            <a href="https://twitter.com/handel_connor" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X">
+                <img src="images/twitter.svg" class="menu" alt="Twitter"/>
+            </a>
         </div>
-    </div>
+        <div class="Column">
+            <a href="https://github.com/C-J28" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <img src="images/github.svg" class="menu" alt="GitHub"/>
+            </a>
+        </div>
+        <div class="Column">
+            <button class="theme-btn" aria-label="Toggle theme">
+                <img src="images/palette-solid.svg" class="menu" alt="Toggle theme"/>
+            </button>
+        </div>
+    </nav>
 
     <div class="Row">
         <div class="Column">
-            <a href="services\service_index.html">
-                <p> Services </p>
+            <a href="services/service_index.html">
+                <p>Services</p>
             </a>
         </div>
         <div class="Column">
             <a href="mailto:handelservices@proton.me">
-                <p> Contact Me </p>
+                <p>Contact Me</p>
             </a>
         </div>
     </div>
-    
-    <div class = "page">
+
+    <section class="page fade-in">
         <div class="big-div">
-            <span class = "box-label">About Me</span>
-            <p class = "text">
-                &emsp;Currently I am a student studying with Drexel university to complete a degree in computer and technology security.  I have always had a place in my heart for exploring the unknown. My siblings and I would spend hours in the woods making up fun and games with our surroundings. From the woods to my workbench it feels the same to be exploring the unlocked potential of personal computing. <br>
-                &emsp;Over time I discovered more and more great tools to try and further my knowledge of computers and eventually microcontrollers. A long time ago, when Radio Shacks had roamed the Earth I had come upon a Raspberry pi Model A beginner kit. It was one of the coolest things I had ever seen, a computer the size of a credit card, how could you beat that. I quickly got to tinkering with it, so many times I had to unplug my moms workstation ethernet cable to try and install a program on the pi. <br>
-                &emsp;As time went on I expanded my arsenal of boards to include classics such as the Arduino Uno, a few esp 8266 and 32 boards, some more Raspberry Pi’s (including the new pico boards), and, the ugly duckling, the Onion Omega2 board. So far my favorite single board computer has been the Raspberry Pi 3B, because it has great performance for the price. My favorite microcontroller is the esp 32, because it is so versatile and approachable for such a low price.  <br>
-                &emsp;Another great piece of kit that I have delved into the past couple years is a 3D printer. Before purchasing it I had begun learning to 3D model so I would have a line up of files to test out whatever printer I would eventually decide on. I picked the Anycubic Chiron, not a great beginner printer, but it has been great for learning how to troubleshoot a printer. <br>
-                &emsp;I hope to always have opportunities to further my knowledge and skills when it comes to the world of computers. <br>
+            <span class="box-label">About Me</span>
+            <p class="text">
+                I am a Computer &amp; Technology Security student at Drexel University with a passion for hands-on engineering and problem solving. From an early age, I was drawn to understanding how things work &mdash; a curiosity that led me from building forts in the woods to building circuits at my workbench.
             </p>
+            <p class="text">
+                My journey into computing started with a Raspberry Pi Model A kit, and that spark has grown into deep experience across embedded platforms including Arduino, ESP32/8266, and multiple generations of Raspberry Pi. I enjoy working at the intersection of hardware and software, where creative solutions meet real-world constraints.
+            </p>
+            <p class="text">
+                Beyond embedded systems, I have developed skills in 3D modeling and printing, CNC machining, welding, and electronics prototyping. I run a Proxmox-based home lab for networking experiments and maintain several personal projects on GitHub.
+            </p>
+
+            <div class="skills-container">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">C/C++</span>
+                <span class="skill-tag">Linux</span>
+                <span class="skill-tag">Networking</span>
+                <span class="skill-tag">Embedded Systems</span>
+                <span class="skill-tag">3D Printing</span>
+                <span class="skill-tag">CNC</span>
+                <span class="skill-tag">Proxmox</span>
+                <span class="skill-tag">Electronics</span>
+                <span class="skill-tag">Zero Trust</span>
+            </div>
         </div>
 
-        <div class = "div-parent">
+        <div class="div-parent">
             <div class="top-div">
-                <span class = "box-label">Certifications and Licenses</span>
-                <ul>
-                    <li><a href="https://www.credly.com/badges/c394444d-ac1f-4789-84e8-1563d1123f1a/public_url">Introduction to Zero Trust (LFS183)</a></li>
+                <span class="box-label">Certifications</span>
+                <ul class="lists" style="padding: 0.75rem 1.5rem;">
+                    <li><a href="https://www.credly.com/badges/c394444d-ac1f-4789-84e8-1563d1123f1a/public_url" target="_blank" rel="noopener noreferrer">Introduction to Zero Trust (LFS183)</a></li>
                 </ul>
             </div>
             <div class="bottom-div">
-                <span class = "box-label">Hobbies</span>
+                <span class="box-label">Hobbies &amp; Interests</span>
 
-                <div class = "staticBox">
-                    <img id="staticImage" src="" class="image">
+                <div class="staticBox">
+                    <img id="staticImage" src="" class="image" alt="Hobby slideshow">
                 </div>
 
-                <ul class = "lists">
-                    <div class = "hobbyList">
-                            <li class="hobbyListItem">3D Modeling and Printing</li> 
-                            <li class="hobbyListItem">Welding</li>
-                            <li class="hobbyListItem">Auto Mechanics</li>
-                            <li class="hobbyListItem">Exploring embedded systems</li>
-                                <ul class="lists">
-                                    <li class="hobbyListItem">Raspberry Pi</li>
-                                    <li class="hobbyListItem">Arduino</li>
-                                    <li class="hobbyListItem">ESP 32 and 8266</li>
-                                </ul>
-                            <li class="hobbyListItem">CNC Machining</li>
-                            <li class="hobbyListItem">PC Building</li>
-                            <li class="hobbyListItem">Electronics prototyping</li>
-                            <li class="hobbyListItem">Proxmox Network Lab</li>
-                        </div>
-                    </div> 
+                <ul class="lists">
+                    <div class="hobbyList">
+                        <li class="hobbyListItem">3D Modeling &amp; Printing</li>
+                        <li class="hobbyListItem">Welding</li>
+                        <li class="hobbyListItem">Auto Mechanics</li>
+                        <li class="hobbyListItem">Embedded Systems</li>
+                        <ul class="lists sub-list">
+                            <li class="hobbyListItem">Raspberry Pi</li>
+                            <li class="hobbyListItem">Arduino</li>
+                            <li class="hobbyListItem">ESP32 &amp; ESP8266</li>
+                        </ul>
+                        <li class="hobbyListItem">CNC Machining</li>
+                        <li class="hobbyListItem">PC Building</li>
+                        <li class="hobbyListItem">Electronics Prototyping</li>
+                        <li class="hobbyListItem">Proxmox Home Lab</li>
+                    </div>
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class = "page">
+    <section class="page fade-in">
         <div class="big-div">
-            <span class = "box-label">Current Project</span>
-            <p class = "text">
-                <a href="https://github.com/C-J28/BizSigns">BizSigns</a>
+            <span class="box-label">Current Project</span>
+            <p class="text">
+                <a href="https://github.com/C-J28/BizSigns" target="_blank" rel="noopener noreferrer">BizSigns</a>
+                &mdash; A digital signage solution for small businesses.
             </p>
         </div>
 
-        <div class = "div-parent">
+        <div class="div-parent">
             <div class="top-div">
-                <span class = "box-label"></span>
-                <p>
-                    
-                </p>
+                <span class="box-label"></span>
             </div>
-            
+
             <div class="bottom-div">
-                <span class = "box-label">Currently Reading</span>
-                <ul class = "lists">
-                    <img src="images/book/th-3802144370.jpg">
-                </ul>
+                <span class="box-label">Currently Reading</span>
+                <img src="images/book/th-3802144370.jpg" alt="Current book" class="book-img">
             </div>
         </div>
-    </div>
-</body>
+    </section>
 
-<script src="app.js"></script>
+    <footer>
+        <p>&copy; 2026 Connor Handel</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
 </html>

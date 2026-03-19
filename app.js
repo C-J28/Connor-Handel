@@ -1,84 +1,75 @@
 'use strict';
 
-/**
-var now = new Date();
+// Theme toggle
+window.onload = function () {
+  const switcher = document.querySelector('.theme-btn');
+  if (switcher) {
+    switcher.addEventListener('click', function () {
+      document.body.classList.toggle('dark-theme');
+      document.body.classList.toggle('light-theme');
+    });
+  }
 
-var logData = {
-  page: window.location.href,
-  timestamp: now.toISOString(),
-  user_agent: navigator.userAgent,
-  language: navigator.language,
-  platform: navigator.platform,
-  ip: window.location.href.split('/')[2]
+  // Fade-in on scroll
+  const fadeEls = document.querySelectorAll('.fade-in');
+  if (fadeEls.length > 0) {
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeEls.forEach(function (el) {
+      observer.observe(el);
+    });
+  }
 };
 
-var existingLogData = JSON.parse(localStorage.getItem('logData')) || [];
-existingLogData.push(logData);
-
-console.log(logData);
-*/
-
-window.onload = function () {
-
-const switcher = document.querySelector('.theme-btn');
-
-switcher.addEventListener('click', function() {
-    document.body.classList.toggle('dark-theme');
-    document.body.classList.toggle('light-theme');
-
-
-    const className = document.body.className;
-    if(className == "light-theme") {
-        this.textContent = "Dark";
-    } else {
-        this.textContent = "Light";
-    }
-});
-
-}
-
-
-
-function refreshTime() {
-  const timeDisplay = document.getElementById("time");
-  const dateString = new Date().toLocaleString();
-  const formattedString = dateString.replace(", ", " - ");
-  timeDisplay.textContent = formattedString;
-}
+// Live clock
+var timeDisplay = document.getElementById('time');
+if (timeDisplay) {
+  function refreshTime() {
+    var dateString = new Date().toLocaleString();
+    var formattedString = dateString.replace(', ', ' - ');
+    timeDisplay.textContent = formattedString;
+  }
+  refreshTime();
   setInterval(refreshTime, 1000);
-
-
-
-var slideShow = document.getElementById("staticImage")
-
-const img = [ 
-  "hobbyimages/image1.jpg",
-  "hobbyimages/image2.gif",
-  "hobbyimages/image3.jpg",
-  "hobbyimages/image4.png",
-  "hobbyimages/image5.jpg",
-  "hobbyimages/image6.jpg",
-  "hobbyimages/image7.jpg",
-  "hobbyimages/image8.jpg",
-  "hobbyimages/image9.jpg",
-  "hobbyimages/image10.jpg",
-];
-
-var counter = 0;
-
-function loopTimer () {
-  slideShow.src = img[counter];
-  counter++;
-
-  if (counter < img.length) {
-    setTimeout(loopTimer, 10000);
-  }
-  else {
-    counter = 0;
-    setTimeout(loopTimer, 10000);
-  }
 }
 
-loopTimer();
+// Hobby slideshow with crossfade
+var slideShow = document.getElementById('staticImage');
+if (slideShow) {
+  var img = [
+    'hobbyimages/image1.jpg',
+    'hobbyimages/image2.gif',
+    'hobbyimages/image3.jpg',
+    'hobbyimages/image4.png',
+    'hobbyimages/image5.jpg',
+    'hobbyimages/image6.jpg',
+    'hobbyimages/image7.jpg',
+    'hobbyimages/image8.jpg',
+    'hobbyimages/image9.jpg',
+    'hobbyimages/image10.jpg',
+  ];
 
-//slideShow.src = img[3];
+  var counter = 0;
+
+  function showNextImage() {
+    slideShow.classList.remove('loaded');
+
+    setTimeout(function () {
+      slideShow.src = img[counter];
+      counter = (counter + 1) % img.length;
+    }, 400);
+  }
+
+  slideShow.addEventListener('load', function () {
+    slideShow.classList.add('loaded');
+  });
+
+  showNextImage();
+  setInterval(showNextImage, 8000);
+}
